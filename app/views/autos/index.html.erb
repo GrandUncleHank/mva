@@ -1,0 +1,13 @@
+<h1>Autos</h1>
+<div class="card-panel">
+    <div class="row">
+      <div class="col s12 m5">
+    
+<% @autos.each do |auto| %>
+<h3><%= link_to auto.title, auto_path(auto), class: "card-title " %></h3>
+
+<% end %>
+</div>
+</div>
+</div>
+<%= link_to "Create Post", new_auto_path, class: "btn  light-blue darken-3" %>
