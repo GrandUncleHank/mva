@@ -14,3 +14,56 @@
  *= require_self
  */
  @import "materialize";
+
+
+nav{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2a940+0,ef5656+78 */
+  background: #f2a940;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #f2a940 0%, #ef5656 78%) !important;
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #f2a940 0%, #ef5656 78%) !important;
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #f2a940 0%, #ef5656 78%) !important;
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2a940', endColorstr='#ef5656', GradientType=1);
+
+  /* IE6-9 */
+  min-height: 3.25rem;
+  position: relative;
+}
+
+ .center{
+    text-align:center;
+}
+.navbar {
+  	font-family: 'Ubuntu', sans-serif;
+	text-transform: uppercase;
+    margin-bottom: 0px;
+}
+.navbar-default {
+  height: 80px;
+}
+.navbar-default .navbar-nav > li > a,
+.navbar-brand {
+  letter-spacing: 1.4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 80px;
+}
+
+#logo{
+    float: left;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+#logo:hover {
+    
+color: #fff;
+text-decoration: none;
+}

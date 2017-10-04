@@ -4,10 +4,21 @@
       <div class="col s12 m5">
     
 <% @autos.each do |auto| %>
+<div class="card-panel">
+  
 <h3><%= link_to auto.title, auto_path(auto), class: "card-title " %></h3>
+<p>$<%= auto.price %></p>
+<p><%= auto.description %></p>
+
+</div>
 
 <% end %>
 </div>
 </div>
+
+
 </div>
+
+<% if user_signed_in? %>
 <%= link_to "Create Post", new_auto_path, class: "btn  light-blue darken-3" %>
+<% end %>

@@ -9,11 +9,11 @@ class AutosController < ApplicationController
    end
    
     def new
-        @auto = Auto.new
+        @auto = current_user.autos.build
     end
     
     def create
-      @auto = Auto.new(auto_params)
+      @auto = current_user.autos.build(auto_params)
       
       if @auto.save
           redirect_to autos_path
