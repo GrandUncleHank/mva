@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="card-panel">
+<%= simple_form_for @job do |f| %>
+<%= f.input :title, label: "Job Title" %>
+<%= f.input :description %>
+<%= f.input :contact, label: "Contact Info" %>
+<%= f.button :submit, class: "btn light-blue darken-3" %>
+<%= link_to "Cancel", jobs_path, class: "btn waves-effect waves-light red accent-4" %>
+<% end %>
+
+</div>
+</div>
