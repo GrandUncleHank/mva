@@ -1,4 +1,27 @@
-<h1>Choose a Category</h1>
+<h1 class="center">Choose a Category</h1>
+<div class="container">
 
-<%= link_to "Automotive", new_auto_path, class: "btn waves-effect waves-light light-blue accent-3" %>
-<%= link_to "Jobs", new_job_path, class: "btn waves-effect waves-light light-blue accent-3" %>
+
+    <div class="row">
+        <div class="col s12 m6">
+<div class="card small greengradient">
+    <h2 class="center teal-text text-accent-4"><i class="large material-icons">directions_car</i></h2>
+            
+            <h5 class="white-text center">Automotive</h5>
+            <div class="center">
+<%= link_to "Explore", autos_path, class: "btn-large waves-effect waves-light teal accent-4" %>
+</div>
+</div>
+</div>
+<div class="col s12 m6">
+<div class="card small bluegradient">
+    <h2 class="center blue-text text-accent-3"><i class="large material-icons">business_center</i></h2>
+            
+            <h5 class="white-text center">Jobs</h5>
+            <div class="center">
+<%= link_to "Find", jobs_path, class: "btn-large waves-effect waves-light blue accent-3" %>
+</div>
+</div>
+</div>
+</div>
+</div>

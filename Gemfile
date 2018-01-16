@@ -17,6 +17,10 @@ gem 'materialize-sass', '~> 0.96.1'
 gem 'simple_form'
 gem 'material_icons'
 gem 'devise'
+gem 'paperclip', '~> 5.1'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'will_paginate-materialize'
+gem 'dropzonejs-rails', '~> 0.8.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

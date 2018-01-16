@@ -1,24 +1,42 @@
-<div class="card-panel">
-    <div class="row">
-      <div class="col s12 m5">
-    <h1 class="autotitle">Autos</h1>
-<% @autos.each do |auto| %>
-<div class="card-panel">
-  
-<h3><%= link_to auto.title, auto_path(auto), class: "card-title " %></h3>
-<p>$<%= auto.price %></p>
-<p><%= auto.description %></p>
-<p><%= auto.created_at %></p>
-
-</div>
-
-<% end %>
-</div>
-</div>
 
 
-</div>
 
-<% if user_signed_in? %>
+    
+      <% if user_signed_in? %>
+
 <%= link_to "Create Post", new_auto_path, class: "btn  light-blue darken-3" %>
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">add</i>
+    </a>
+  </div>
 <% end %>
+    <div class="row">
+      
+<% @autos.each do |auto| %>
+
+  <div class="col s12 m3">
+<div class="card medium whitecolor">
+  <div class="card-header">
+<a href="/autos/<%= auto.id %>">
+    <%= image_tag auto.auto_img.url(:auto_index),class: 'responsive-img' %>
+</a>
+</div>
+<div class="card-content">
+<h4><%= link_to truncate(auto.title), auto_path(auto), class: "card-title blue-text" %></h4>
+<p class="green-text">$<%= auto.price %></p>
+<p><%= truncate(auto.description) %></p>
+</div>
+</div>
+</div>
+<% end %>
+
+</div>
+
+
+<div class="center">
+  
+  <%= will_paginate @auto %>
+
+</div>
+

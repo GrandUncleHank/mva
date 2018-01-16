@@ -13,16 +13,17 @@
 
 <% if notice %>
   <script type="text/javascript">
-    Materialize.toast('<%= notice %>', 4000)
+    Materialize.toast('<%= notice %>', 4000, 'green accent-4')
   </script>
 <% end %>
 <% if alert %>
   <script type="text/javascript">
-    Materialize.toast('<%= alert %>', 4000)
+    Materialize.toast('<%= alert %>', 4000, 'red accent-4')
   </script>
 <% end %>
-<%= yield %>
 
+<%= yield %>
+<%= render 'layouts/footer' %>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <%= javascript_include_tag :application %>

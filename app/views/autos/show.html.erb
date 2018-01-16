@@ -1,5 +1,17 @@
 <div class="container">
+
+
 <div class="card-panel">
+    <div class="row">
+        <%= link_to "Back", autos_path, class: "btn waves-effect waves-light cblue" %>
+<% if user_signed_in? %>
+<% if @auto.user_id == current_user.id %>
+<%= link_to "Edit", edit_auto_path, class: "btn waves-effect waves-light light-blue accent-3" %>
+<%= link_to "Delete", auto_path(@auto), method: :delete, data: {confirm: "Are you sure?"}, class: "btn waves-effect waves-light red accent-4" %>
+<% end %>
+<% end %>
+</div>
+<%= image_tag @auto.auto_img.url(:auto_show), class: "auto-show",class: 'responsive-img' %>
 <h2><%= @auto.title %></h2>
 <h4>$<%= @auto.price %></h4>
 <h5><%= @auto.contact %></h5>
@@ -7,12 +19,6 @@
 <p><%= @auto.created_at %></p>
 
 </div>
-<%= link_to "Back", autos_path, class: "btn waves-effect waves-light light-blue darken-4" %>
-<% if user_signed_in? %>
-<% if @auto.user_id == current_user.id %>
-<%= link_to "Edit", edit_auto_path, class: "btn waves-effect waves-light light-blue accent-3" %>
-<%= link_to "Delete", auto_path(@auto), method: :delete, data: {confirm: "Are you sure?"}, class: "btn waves-effect waves-light red accent-4" %>
-<% end %>
-<% end %>
+
 
 </div>
